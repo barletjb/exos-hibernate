@@ -1,13 +1,9 @@
 package com.mycompany.tennis.core.repository;
 
 import com.mycompany.tennis.core.DataSourceProvider;
-import com.mycompany.tennis.core.entity.Joueur;
 import com.mycompany.tennis.core.entity.Match;
-
 import javax.sql.DataSource;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class MatchRepositoryImpl {
 
