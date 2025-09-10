@@ -2,11 +2,8 @@ package com.mycompany.tennis.core.repository;
 
 import com.mycompany.tennis.core.DataSourceProvider;
 import com.mycompany.tennis.core.HibernateUtil;
-import com.mycompany.tennis.core.entity.Joueur;
 import com.mycompany.tennis.core.entity.Tournoi;
 import org.hibernate.Session;
-import org.hibernate.Transaction;
-
 import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
