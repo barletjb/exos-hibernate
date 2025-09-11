@@ -21,22 +21,24 @@ public class EpreuveService {
 
         Session session = null;
         Transaction tx = null;
-        EpreuveFullDto dto = null;
+        EpreuveFullDto epreuveFullDtodto = null;
 
         try {
             session = HibernateUtil.getSessionFactory().getCurrentSession();
             tx = session.beginTransaction();
             Epreuve epreuve = epreuveRepository.getEpreuveById(id);
 
-            dto = new EpreuveFullDto();
-            dto.setId(epreuve.getId());
-            dto.setAnnee(epreuve.getAnnee());
-            dto.setTypeEpreuve(epreuve.getTypeEpreuve());
+            epreuveFullDtodto = new EpreuveFullDto();
+            epreuveFullDtodto.setId(epreuve.getId());
+            epreuveFullDtodto.setAnnee(epreuve.getAnnee());
+            epreuveFullDtodto.setTypeEpreuve(epreuve.getTypeEpreuve());
+
             TournoiDto tournoiDto = new TournoiDto();
             tournoiDto.setId(epreuve.getTournoi().getId());
             tournoiDto.setNom(epreuve.getTournoi().getNom());
             tournoiDto.setCode(epreuve.getTournoi().getCode());
-            dto.setTournoi(tournoiDto);
+
+            epreuveFullDtodto.setTournoi(tournoiDto);
 
             tx.commit();
 
@@ -51,7 +53,7 @@ public class EpreuveService {
             }
         }
 
-        return dto;
+        return epreuveFullDtodto;
 
     }
 
@@ -65,12 +67,13 @@ public class EpreuveService {
             session = HibernateUtil.getSessionFactory().getCurrentSession();
             tx = session.beginTransaction();
             Epreuve epreuve = epreuveRepository.getEpreuveById(id);
-            tx.commit();
 
             dto = new EpreuveLightDto();
             dto.setId(epreuve.getId());
             dto.setAnnee(epreuve.getAnnee());
             dto.setTypeEpreuve(epreuve.getTypeEpreuve());
+
+            tx.commit();
 
         } catch (Exception e) {
             if (tx != null) {
