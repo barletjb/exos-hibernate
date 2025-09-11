@@ -1,10 +1,7 @@
 package com.mycompany.tennis.core.service;
 
 import com.mycompany.tennis.core.HibernateUtil;
-import com.mycompany.tennis.core.dto.EpreuveFullDto;
-import com.mycompany.tennis.core.dto.JoueurDto;
-import com.mycompany.tennis.core.dto.MatchDto;
-import com.mycompany.tennis.core.dto.TournoiDto;
+import com.mycompany.tennis.core.dto.*;
 import com.mycompany.tennis.core.entity.Match;
 import com.mycompany.tennis.core.repository.MatchRepositoryImpl;
 import com.mycompany.tennis.core.repository.ScoreRepositoryImpl;
@@ -67,6 +64,17 @@ public class MatchService {
             matchDto.setVainqueur(joueurDtoVainqueur);
             matchDto.setFinaliste(joueurDtoFinaliste);
             matchDto.setEpreuve(epreuveFullDtodto);
+
+            ScoreFullDto scoreFullDto = new ScoreFullDto();
+            scoreFullDto.setId(match.getScore().getId());
+            scoreFullDto.setSet1(match.getScore().getSet1());
+            scoreFullDto.setSet2(match.getScore().getSet2());
+            scoreFullDto.setSet3(match.getScore().getSet3());
+            scoreFullDto.setSet4(match.getScore().getSet4());
+            scoreFullDto.setSet5(match.getScore().getSet5());
+
+            matchDto.setScore(scoreFullDto);
+            scoreFullDto.setMatch(matchDto);
 
             tx.commit();
 
