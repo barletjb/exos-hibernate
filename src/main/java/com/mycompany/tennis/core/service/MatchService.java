@@ -2,7 +2,11 @@ package com.mycompany.tennis.core.service;
 
 import com.mycompany.tennis.core.HibernateUtil;
 import com.mycompany.tennis.core.dto.*;
+import com.mycompany.tennis.core.entity.Joueur;
 import com.mycompany.tennis.core.entity.Match;
+import com.mycompany.tennis.core.entity.Score;
+import com.mycompany.tennis.core.repository.EpreuveRepositoryImpl;
+import com.mycompany.tennis.core.repository.JoueurRepositoryImpl;
 import com.mycompany.tennis.core.repository.MatchRepositoryImpl;
 import com.mycompany.tennis.core.repository.ScoreRepositoryImpl;
 import org.hibernate.Session;
@@ -12,16 +16,97 @@ public class MatchService {
 
     private MatchRepositoryImpl matchRepository;
     private ScoreRepositoryImpl scoreRepository;
+    private EpreuveRepositoryImpl epreuveRepository;
+    private JoueurRepositoryImpl joueurRepository;
 
 
     public MatchService() {
         this.matchRepository = new MatchRepositoryImpl();
         this.scoreRepository = new ScoreRepositoryImpl();
+        this.epreuveRepository = new EpreuveRepositoryImpl();
+        this.joueurRepository = new JoueurRepositoryImpl();
     }
 
     public void enregistrerNouveauMatch(Match match) {
         matchRepository.create(match);
         scoreRepository.create(match.getScore());
+    }
+
+    public void createMatch(MatchDto dto){
+
+        Session session = null;
+        Transaction tx = null;
+
+
+        try {
+            session = HibernateUtil.getSessionFactory().getCurrentSession();
+            tx = session.beginTransaction();
+
+            Match match = new Match();
+            match.setEpreuve(epreuveRepository.getEpreuveById(dto.getEpreuve().getId()));
+            match.setVainqueur(joueurRepository.getById(dto.getVainqueur().getId()));
+            match.setFinaliste(joueurRepository.getById(dto.getFinaliste().getId()));
+
+            Score score = new Score();
+            score.setMatch(match);
+            match.setScore(score);
+            score.setSet1(dto.getScore().getSet1());
+            score.setSet2(dto.getScore().getSet2());
+            score.setSet3(dto.getScore().getSet3());
+            score.setSet4(dto.getScore().getSet4());
+            score.setSet5(dto.getScore().getSet5());
+
+            matchRepository.create(match);
+
+            tx.commit();
+
+        } catch (Exception e) {
+            if (tx != null) {
+                tx.rollback();
+            }
+            e.printStackTrace();
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
+
+    }
+
+    public void tapisVert(Long id) {
+
+        Session session = null;
+        Transaction tx = null;
+        Match match = null;
+
+        try {
+            session = HibernateUtil.getSessionFactory().getCurrentSession();
+            tx = session.beginTransaction();
+            match = matchRepository.getMatchById(id);
+
+            Joueur ancienVainqueur = match.getVainqueur();
+            match.setVainqueur(match.getFinaliste());
+            match.setFinaliste(ancienVainqueur);
+
+            match.getScore().setSet1((byte)0);
+            match.getScore().setSet2((byte)0);
+            match.getScore().setSet3((byte)0);
+            match.getScore().setSet4((byte)0);
+            match.getScore().setSet5((byte)0);
+
+            tx.commit();
+
+        } catch (Exception e) {
+            if (tx != null) {
+                tx.rollback();
+            }
+            e.printStackTrace();
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
+
     }
 
     public MatchDto getMatch(Long id) {
