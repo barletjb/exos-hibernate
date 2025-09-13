@@ -145,7 +145,7 @@ public class JoueurService {
         }
     }
 
-    public List<JoueurDto> getListJoueurs(){
+    public List<JoueurDto> getListJoueurs(char sexe){
 
         Session session = null;
         Transaction tx = null;
@@ -154,7 +154,7 @@ public class JoueurService {
         try {
             session = HibernateUtil.getSessionFactory().getCurrentSession();
             tx = session.beginTransaction();
-            List<Joueur> joueurs = joueurRepository.list();
+            List<Joueur> joueurs = joueurRepository.list(sexe);
 
             for (Joueur joueur : joueurs){
                 final JoueurDto joueurDto = new JoueurDto();
