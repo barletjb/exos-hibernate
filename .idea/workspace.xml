@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="501e8047-5684-461c-975d-6f5d78c18636" name="Changes" comment="Restructuration projet tennis en multi-modules Maven">
+    <list default="true" id="501e8047-5684-461c-975d-6f5d78c18636" name="Changes" comment="Insert &amp; Delete cascade">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consoleui/src/main/java/com/mycompany/tennis/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleui/src/main/java/com/mycompany/tennis/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleui/src/main/java/com/mycompany/tennis/controller/MatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleui/src/main/java/com/mycompany/tennis/controller/MatchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleui/src/main/java/com/mycompany/tennis/controller/ScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleui/src/main/java/com/mycompany/tennis/controller/ScoreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/entity/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/entity/Match.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/entity/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/entity/Score.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/repository/MatchRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/repository/MatchRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/repository/ScoreRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/repository/ScoreRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/service/MatchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/service/MatchService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/service/ScoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/service/ScoreService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleui/src/main/java/com/mycompany/tennis/controller/JoueurController.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleui/src/main/java/com/mycompany/tennis/controller/JoueurController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleui/target/classes/com/mycompany/tennis/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/consoleui/target/classes/com/mycompany/tennis/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/repository/JoueurRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/repository/JoueurRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/service/JoueurService.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/service/JoueurService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,11 +78,20 @@
       <option name="project" value="LOCAL" />
       <updated>1757620796159</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Insert &amp; Delete cascade">
+      <option name="closed" value="true" />
+      <created>1757752063767</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1757752063767</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Restructuration projet tennis en multi-modules Maven" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restructuration projet tennis en multi-modules Maven" />
+    <MESSAGE value="Insert &amp; Delete cascade" />
+    <option name="LAST_COMMIT_MESSAGE" value="Insert &amp; Delete cascade" />
   </component>
 </project>

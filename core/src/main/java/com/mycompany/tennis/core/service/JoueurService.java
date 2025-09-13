@@ -1,10 +1,14 @@
 package com.mycompany.tennis.core.service;
 
 import com.mycompany.tennis.core.HibernateUtil;
+import com.mycompany.tennis.core.dto.JoueurDto;
 import com.mycompany.tennis.core.entity.Joueur;
 import com.mycompany.tennis.core.repository.JoueurRepositoryImpl;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class JoueurService {
 
@@ -139,6 +143,40 @@ public class JoueurService {
             }
 
         }
+    }
+
+    public List<JoueurDto> getListJoueurs(){
+
+        Session session = null;
+        Transaction tx = null;
+        List<JoueurDto> dtos = new ArrayList<>();
+
+        try {
+            session = HibernateUtil.getSessionFactory().getCurrentSession();
+            tx = session.beginTransaction();
+            List<Joueur> joueurs = joueurRepository.list();
+
+            for (Joueur joueur : joueurs){
+                final JoueurDto joueurDto = new JoueurDto();
+                joueurDto.setId(joueur.getId());
+                joueurDto.setNom(joueur.getNom());
+                joueurDto.setPrenom(joueur.getPrenom());
+                joueurDto.setSexe(joueur.getSexe());
+                dtos.add(joueurDto);
+            }
+
+            tx.commit();
+        } catch (Exception e) {
+            if (tx != null) {
+                tx.rollback();
+            }
+            e.printStackTrace();
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
+        return dtos;
 
     }
 }

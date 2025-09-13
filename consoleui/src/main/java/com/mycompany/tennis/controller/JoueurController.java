@@ -1,5 +1,6 @@
 package com.mycompany.tennis.controller;
 
+import com.mycompany.tennis.core.dto.JoueurDto;
 import com.mycompany.tennis.core.entity.Joueur;
 import com.mycompany.tennis.core.service.JoueurService;
 
@@ -77,5 +78,11 @@ public class JoueurController {
 
         joueurService.deleteJoueur(identifiant);
 
+    }
+
+    public void afficheListJoueurs(){
+        for (JoueurDto dto : joueurService.getListJoueurs()){
+            System.out.println(dto.getNom() + " | " + dto.getPrenom() + " | " + dto.getSexe());
+        }
     }
 }

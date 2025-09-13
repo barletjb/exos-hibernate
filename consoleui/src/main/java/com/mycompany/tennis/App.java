@@ -35,12 +35,15 @@ public class App
 //        controller.afficheDetailsScore();
 //        controller.tapisVert();
 
-        MatchController controller = new MatchController();
+//        MatchController controller = new MatchController();
 //        controller.ajouterMatch();
 //        controller.supprimerMAtch();
 
-        ScoreController controller1 = new ScoreController();
-        controller1.supprimerScore();
+//        ScoreController controller1 = new ScoreController();
+//        controller1.supprimerScore();
+
+        JoueurController controller = new JoueurController();
+        controller.afficheListJoueurs();
 
 
     }
