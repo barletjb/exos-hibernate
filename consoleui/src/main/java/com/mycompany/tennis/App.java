@@ -36,7 +36,11 @@ public class App
 //        controller.tapisVert();
 
         MatchController controller = new MatchController();
-        controller.ajouterMatch();
+//        controller.ajouterMatch();
+//        controller.supprimerMAtch();
+
+        ScoreController controller1 = new ScoreController();
+        controller1.supprimerScore();
 
 
     }

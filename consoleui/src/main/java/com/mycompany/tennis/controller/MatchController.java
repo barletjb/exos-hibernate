@@ -75,6 +75,15 @@ public class MatchController {
 
     }
 
+    public void supprimerMAtch() {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Entrez l'identifiant du match que vous voulez supprimer ? ");
+        long identifiant = scanner.nextLong();
+        matchService.deleteMatch(identifiant);
+
+    }
+
     public void afficheDetailsMatch() {
 
         Scanner scanner = new Scanner(System.in);

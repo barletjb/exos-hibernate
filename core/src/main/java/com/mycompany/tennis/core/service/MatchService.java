@@ -32,6 +32,32 @@ public class MatchService {
         scoreRepository.create(match.getScore());
     }
 
+    public void deleteMatch(Long id){
+
+        Session session = null;
+        Transaction tx = null;
+
+        try {
+            session = HibernateUtil.getSessionFactory().getCurrentSession();
+            tx = session.beginTransaction();
+            matchRepository.deleteMatch(id);
+
+
+            tx.commit();
+
+        } catch (Exception e) {
+            if (tx != null) {
+                tx.rollback();
+            }
+            e.printStackTrace();
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
+
+    }
+
     public void createMatch(MatchDto dto){
 
         Session session = null;

@@ -3,6 +3,8 @@ package com.mycompany.tennis.core.repository;
 import com.mycompany.tennis.core.HibernateUtil;
 import com.mycompany.tennis.core.entity.Match;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
+
 import java.sql.*;
 
 public class MatchRepositoryImpl {
@@ -22,7 +24,15 @@ public class MatchRepositoryImpl {
         System.out.println("Match lu");
 
         return match;
+    }
 
+    public void deleteMatch(Long id){
+
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Match match = session.get(Match.class, id);
+        session.delete(match);
+
+        System.out.println("Match Supprimé");
 
     }
 }

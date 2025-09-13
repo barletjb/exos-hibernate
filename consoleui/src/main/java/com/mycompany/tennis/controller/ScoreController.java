@@ -45,4 +45,13 @@ public class ScoreController {
     public void creerScore() {
 
     }
+
+    public void supprimerScore() {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Entrez l'identifiant du score que vous voulez supprimer ? ");
+        long identifiant = scanner.nextLong();
+        scoreService.deleteScore(identifiant);
+
+    }
 }

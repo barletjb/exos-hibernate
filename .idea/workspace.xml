@@ -4,40 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="501e8047-5684-461c-975d-6f5d78c18636" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/tennis/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/tennis/core/Cours.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/tennis/core/DataSourceProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/tennis/core/HibernateUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/tennis/core/dto/EpreuveFullDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/tennis/core/dto/EpreuveLightDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/tennis/core/dto/JoueurDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/tennis/core/dto/MatchDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/tennis/core/dto/ScoreFullDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/tennis/core/dto/TournoiDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/tennis/core/entity/Epreuve.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/tennis/core/entity/Joueur.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/tennis/core/entity/Match.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/tennis/core/entity/Score.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/tennis/core/entity/Tournoi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/tennis/core/repository/EpreuveRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/tennis/core/repository/JoueurRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/tennis/core/repository/MatchRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/tennis/core/repository/ScoreRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/tennis/core/repository/TournoiRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/tennis/core/service/EpreuveService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/tennis/core/service/JoueurService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/tennis/core/service/MatchService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/tennis/core/service/ScoreService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/tennis/core/service/TournoiService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mycompany/tennis/AppTest.java" beforeDir="false" />
+    <list default="true" id="501e8047-5684-461c-975d-6f5d78c18636" name="Changes" comment="Restructuration projet tennis en multi-modules Maven">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleui/src/main/java/com/mycompany/tennis/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleui/src/main/java/com/mycompany/tennis/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleui/src/main/java/com/mycompany/tennis/controller/MatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleui/src/main/java/com/mycompany/tennis/controller/MatchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleui/src/main/java/com/mycompany/tennis/controller/ScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleui/src/main/java/com/mycompany/tennis/controller/ScoreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/entity/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/entity/Match.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/entity/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/entity/Score.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/repository/MatchRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/repository/MatchRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/repository/ScoreRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/repository/ScoreRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/service/MatchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/service/MatchService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/service/ScoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/service/ScoreService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,8 +46,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.App.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
@@ -95,6 +74,19 @@
       <option name="presentableId" value="Default" />
       <updated>1751275739620</updated>
     </task>
+    <task id="LOCAL-00001" summary="Restructuration projet tennis en multi-modules Maven">
+      <option name="closed" value="true" />
+      <created>1757620796159</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1757620796159</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Restructuration projet tennis en multi-modules Maven" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restructuration projet tennis en multi-modules Maven" />
   </component>
 </project>
