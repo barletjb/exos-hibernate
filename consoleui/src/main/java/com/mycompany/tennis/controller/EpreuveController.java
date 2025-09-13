@@ -29,4 +29,14 @@ public class EpreuveController {
 
     }
 
+    public void afficheListEpreuve(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Veuillez saisir le code du tournoi? ");
+        String codeTournoi = scanner.nextLine();
+
+        for (EpreuveFullDto dto : epreuveService.getListEpreuves(codeTournoi)){
+            System.out.println(dto.getTournoi().getNom() + " | " + dto.getAnnee() + " | " + dto.getTypeEpreuve());
+        }
+    }
+
 }

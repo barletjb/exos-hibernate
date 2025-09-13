@@ -42,9 +42,11 @@ public class App
 //        ScoreController controller1 = new ScoreController();
 //        controller1.supprimerScore();
 
-        JoueurController controller = new JoueurController();
-        controller.afficheListJoueurs();
+//        JoueurController controller = new JoueurController();
+//        controller.afficheListJoueurs();
 
+        EpreuveController controller = new EpreuveController();
+        controller.afficheListEpreuve();
 
     }
 }
