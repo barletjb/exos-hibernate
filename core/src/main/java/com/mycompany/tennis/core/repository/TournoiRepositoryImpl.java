@@ -1,9 +1,12 @@
 package com.mycompany.tennis.core.repository;
 
 import com.mycompany.tennis.core.DataSourceProvider;
+import com.mycompany.tennis.core.EntityManagerHolder;
 import com.mycompany.tennis.core.HibernateUtil;
 import com.mycompany.tennis.core.entity.Tournoi;
 import org.hibernate.Session;
+
+import javax.persistence.EntityManager;
 import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
@@ -13,17 +16,21 @@ public class TournoiRepositoryImpl {
 
     public void create(Tournoi tournoi) {
 
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-        session.persist(tournoi);
+        EntityManager em = EntityManagerHolder.getCurrentEntityManager();
+//        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        em.persist(tournoi);
         System.out.println("Tournoi créé");
 
     }
 
     public void delete(Long id) {
 
-        Tournoi tournoi = getTournoiById(id);
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-        session.delete(tournoi);
+//        Tournoi tournoi = getTournoiById(id);
+//        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+//        session.delete(tournoi);
+        EntityManager em = EntityManagerHolder.getCurrentEntityManager();
+        Tournoi tournoi = em.find(Tournoi.class,id);
+        em.remove(tournoi);
 
         System.out.println("Tournoi supprimé");
 
@@ -31,8 +38,10 @@ public class TournoiRepositoryImpl {
 
     public Tournoi getTournoiById(Long id) {
 
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-        Tournoi tournoi = session.get(Tournoi.class,id);
+        EntityManager em = EntityManagerHolder.getCurrentEntityManager();
+//        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+//        Tournoi tournoi = session.get(Tournoi.class,id);
+        Tournoi tournoi = em.find(Tournoi.class, id);
         System.out.println("Tournoi Lu");
 
         return  tournoi;

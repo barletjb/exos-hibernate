@@ -1,5 +1,6 @@
 package com.mycompany.tennis.core.service;
 
+import com.mycompany.tennis.core.EntityManagerHolder;
 import com.mycompany.tennis.core.HibernateUtil;
 import com.mycompany.tennis.core.dto.EpreuveFullDto;
 import com.mycompany.tennis.core.dto.EpreuveLightDto;
@@ -11,6 +12,8 @@ import com.mycompany.tennis.core.repository.EpreuveRepositoryImpl;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -108,13 +111,18 @@ public class EpreuveService {
     }
 
     public List<EpreuveFullDto> getListEpreuves(String codeTournoi){
-        Session session = null;
-        Transaction tx = null;
+//        Session session = null;
+//        Transaction tx = null;
+        EntityManager em = null;
+        EntityTransaction tx = null;
         List<EpreuveFullDto> dtos = new ArrayList<>();
 
         try {
-            session = HibernateUtil.getSessionFactory().getCurrentSession();
-            tx = session.beginTransaction();
+//            session = HibernateUtil.getSessionFactory().getCurrentSession();
+//            tx = session.beginTransaction();
+            em = EntityManagerHolder.getCurrentEntityManager();
+            tx = em.getTransaction();
+            tx.begin();
             List<Epreuve> epreuves = epreuveRepository.list(codeTournoi);
 
             for (Epreuve epreuve : epreuves){
@@ -139,8 +147,8 @@ public class EpreuveService {
             }
             e.printStackTrace();
         } finally {
-            if (session != null) {
-                session.close();
+            if (em != null) {
+                em.close();
             }
         }
         return dtos;

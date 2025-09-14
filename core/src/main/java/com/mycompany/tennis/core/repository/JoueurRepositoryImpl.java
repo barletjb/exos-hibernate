@@ -1,9 +1,13 @@
 package com.mycompany.tennis.core.repository;
 
+import com.mycompany.tennis.core.EntityManagerHolder;
 import com.mycompany.tennis.core.HibernateUtil;
 import com.mycompany.tennis.core.entity.Joueur;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
+
+import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
 import java.sql.*;
 import java.util.List;
 
@@ -90,10 +94,15 @@ public class JoueurRepositoryImpl {
 //        }
 //        return joueurs;
 //    }
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-        Query<Joueur> query = session.createNamedQuery("given_sexe",Joueur.class);
-        query.setParameter(0,sexe);
+//        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+//        Query<Joueur> query = session.createNamedQuery("given_sexe",Joueur.class);
+//        query.setParameter(0,sexe);
+
+        EntityManager em = EntityManagerHolder.getCurrentEntityManager();
+        TypedQuery<Joueur> query = em.createNamedQuery("given_sexe",Joueur.class);
+        query.setParameter("sexe",sexe);
         List<Joueur> joueurs = query.getResultList();
+        System.out.println("Joueurs lus");
 
         return joueurs;
     }

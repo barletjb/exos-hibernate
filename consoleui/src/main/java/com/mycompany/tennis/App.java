@@ -1,6 +1,7 @@
 package com.mycompany.tennis;
 
 import com.mycompany.tennis.controller.*;
+import com.mycompany.tennis.core.entity.Tournoi;
 
 public class App
 {
@@ -42,11 +43,20 @@ public class App
 //        ScoreController controller1 = new ScoreController();
 //        controller1.supprimerScore();
 
+//        JoueurController controller = new JoueurController();
+//        controller.afficheListJoueurs();
+//
+//        EpreuveController controller2 = new EpreuveController();
+//        controller2.afficheListEpreuve();
+
+//        TournoiController controller = new TournoiController();
+//        controller.supprimerTournoi();
+
+//        EpreuveController controller1 = new EpreuveController();
+//        controller1.afficheListEpreuve();
+
         JoueurController controller = new JoueurController();
         controller.afficheListJoueurs();
-
-        EpreuveController controller2 = new EpreuveController();
-        controller2.afficheListEpreuve();
 
     }
 }
