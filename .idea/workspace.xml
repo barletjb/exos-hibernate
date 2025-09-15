@@ -4,30 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="501e8047-5684-461c-975d-6f5d78c18636" name="Changes" comment="Dynamic Fetching + NamedQuery">
+    <list default="true" id="06a5155e-1d12-43e5-b72f-5d9c1e590441" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleui/src/main/java/com/mycompany/tennis/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/consoleui/src/main/java/com/mycompany/tennis/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleui/target/classes/com/mycompany/tennis/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/consoleui/target/classes/com/mycompany/tennis/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/entity/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/entity/Joueur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/repository/EpreuveRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/repository/EpreuveRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/repository/JoueurRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/repository/JoueurRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/repository/TournoiRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/repository/TournoiRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/service/EpreuveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/service/EpreuveService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/service/JoueurService.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/service/JoueurService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/service/TournoiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/mycompany/tennis/core/service/TournoiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/resources/hibernate.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleui/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/consoleui/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleui/target/classes/com/mycompany/tennis/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleui/target/classes/com/mycompany/tennis/controller/EpreuveController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleui/target/classes/com/mycompany/tennis/controller/JoueurController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleui/target/classes/com/mycompany/tennis/controller/MatchController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleui/target/classes/com/mycompany/tennis/controller/ScoreController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleui/target/classes/com/mycompany/tennis/controller/TournoiController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/consoleui/target/test-classes/com/mycompany/tennis/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,9 +41,9 @@
   }
 }</component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
+  &quot;associatedIndex&quot;: 8
 }</component>
-  <component name="ProjectId" id="32ZEMPGni3QmbwNFYnfzZJXvtsz" />
+  <component name="ProjectId" id="32h59XUvhiyVwlk2lXL9XGyX3WX" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -55,92 +51,105 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.core [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.tennis-parent [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.tennis-parent [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.webui [tomcat7:run].executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/jbbt/IdeaProjects/Tennis&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jbbt/IdeaProjects/Tennis/pom.xml&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;settings.editor.splitter.proportion&quot;: &quot;0.36354378&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/core/src/main/resources/META-INF" />
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/webui/src/main/webapp/WEB-INF" />
+      <recent name="$PROJECT_DIR$/webui/src/main/webapp/META-INF" />
     </key>
+  </component>
+  <component name="RunManager" selected="Maven.webui [tomcat7:run]">
+    <configuration name="core [install]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="install" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/core" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="webui [tomcat7:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/webui" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2">
+        <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="clean" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Maven.webui [tomcat7:run]" />
+      <item itemvalue="Maven.core [install]" />
+    </list>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="501e8047-5684-461c-975d-6f5d78c18636" name="Changes" comment="" />
+      <changelist id="06a5155e-1d12-43e5-b72f-5d9c1e590441" name="Changes" comment="" />
       <created>1751275739620</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1751275739620</updated>
     </task>
-    <task id="LOCAL-00001" summary="Restructuration projet tennis en multi-modules Maven">
-      <option name="closed" value="true" />
-      <created>1757620796159</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1757620796159</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Insert &amp; Delete cascade">
-      <option name="closed" value="true" />
-      <created>1757752063767</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1757752063767</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Add listJoueur">
-      <option name="closed" value="true" />
-      <created>1757753890674</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1757753890674</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Refactor List&lt;Joueur&gt; with sexe Parameter">
-      <option name="closed" value="true" />
-      <created>1757754646137</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1757754646137</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Add List&lt;Epreuve&gt;">
-      <option name="closed" value="true" />
-      <created>1757756507270</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1757756507270</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Dynamic Fetching + NamedQuery">
-      <option name="closed" value="true" />
-      <created>1757758136521</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1757758136521</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
     <servers />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Restructuration projet tennis en multi-modules Maven" />
-    <MESSAGE value="Insert &amp; Delete cascade" />
-    <MESSAGE value="Add listJoueur" />
-    <MESSAGE value="Refactor List&lt;Joueur&gt; with sexe Parameter" />
-    <MESSAGE value="Add List&lt;Epreuve&gt;" />
-    <MESSAGE value="Dynamic Fetching + NamedQuery" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dynamic Fetching + NamedQuery" />
   </component>
 </project>

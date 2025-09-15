@@ -1,0 +1,4 @@
+0:0:0:0:0:0:0:1 - - [14/Sep/2025:17:46:50 +0200] "GET / HTTP/1.1" 404 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [14/Sep/2025:17:46:54 +0200] "GET /webui/listes.jsp HTTP/1.1" 200 1233 http-bio-8080-exec-3 411
+0:0:0:0:0:0:0:1 - - [14/Sep/2025:17:46:54 +0200] "GET /webui/style.css HTTP/1.1" 304 - http-bio-8080-exec-4 1
+0:0:0:0:0:0:0:1 - - [14/Sep/2025:17:46:54 +0200] "GET /cdn-cgi/challenge-platform/scripts/jsd/main.js HTTP/1.1" 404 - http-bio-8080-exec-5 0

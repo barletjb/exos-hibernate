@@ -13,7 +13,6 @@
 
     <artifactId>console-ui</artifactId>
     <packaging>jar</packaging>
-
     <name>console-ui</name>
     <url>http://maven.apache.org</url>
 
